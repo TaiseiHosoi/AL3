@@ -15,11 +15,24 @@
 /// ゲームシーン
 /// </summary>
 class GameScene {
+public:
+	enum PartId {
+		Root,	//大元
+		Spine,	//脊椎
+		Chest,	//胸
+		Head,	//頭
+		ArmL,	//左上
+		ArmR,	//右腕
+		Hip,	//尻
+		LegL,	//左足
+		LegR,	//右足
+	};
 
-  public: // メンバ関数
-	/// <summary>
-	/// コンストクラタ
-	/// </summary>
+
+public: // メンバ関数
+  /// <summary>
+  /// コンストクラタ
+  /// </summary>
 	GameScene();
 
 	/// <summary>
@@ -42,7 +55,7 @@ class GameScene {
 	/// </summary>
 	void Draw();
 
-  private: // メンバ変数
+private: // メンバ変数
 	DirectXCommon* dxCommon_ = nullptr;
 	Input* input_ = nullptr;
 	Audio* audio_ = nullptr;
